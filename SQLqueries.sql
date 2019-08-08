@@ -81,7 +81,7 @@ ALTER TABLE studentCourse
 /*        4A      
 The Curriculum Planning Committee is attempting to fill in gaps in the current course offerings.  
 You need to provide them with a query which lists each department and the number of courses offered by that department.  
-The two columns should have headers “Department Name? and “# Courses?, and the output should be sorted by the "# Courses" 
+The two columns should have headers â€œDepartment Name? and â€œ# Courses?, and the output should be sorted by the "# Courses" 
 in each department (ascending).
 */
 
@@ -93,7 +93,7 @@ SELECT d.name AS "Department Name", COUNT(c.id) AS "# Courses"
 /*      4B
 The recruiting department needs to know which courses are most popular with the students.  
 Please provide them with a query which lists each course and the number of students in that course.  
-The two columns should have headers “Course Name? and “# Students?, and the output should be sorted 
+The two columns should have headers â€œCourse Name? and â€œ# Students?, and the output should be sorted 
 by # Students descending and then by course name ascending.
 */
 
@@ -130,7 +130,7 @@ SELECT c.name, COUNT(sc.studentId) AS "# Students"
 /*    4D
 The enrollment team is gathering analytics about student enrollment throughout the years. Write a query 
 that lists the total # of students that were enrolled in classes during each school year.  
-The first column should have the header “Students?.  Provide a second “Year? column showing the enrollment year.
+The first column should have the header â€œStudents?.  Provide a second â€œYear? column showing the enrollment year.
 */
     
 SELECT COUNT(studentId) AS "Students", TO_CHAR(TRUNC(startDate, 'YEAR'), 'YYYY') AS "Year"
@@ -152,7 +152,7 @@ SELECT COUNT(studentId) AS "Students", TO_CHAR(startDate, 'YYYY-MM') AS "Year-Au
 
 /* 4F
 Students are required to take 4 courses, and at least two of these courses must be from the department of their 
-major.  Write a query to list students’ First Name, Last Name, and Number of Courses they are taking in their 
+major.  Write a query to list studentsâ€™ First Name, Last Name, and Number of Courses they are taking in their 
 major department.  The output should be sorted first in increasing order of the number of courses, then by 
 student last name.
 */
@@ -238,7 +238,7 @@ The grading scale is as follows:
         Progress < 70:               B
        Progress >= 70:             A
 
-Write a query which displays each student’s first name, lastname, grade based on minimum progress, and grade based on maximum progress.
+Write a query which displays each studentâ€™s first name, lastname, grade based on minimum progress, and grade based on maximum progress.
 */
 
 SELECT s.firstname AS "First Name", s.lastname AS "Last Name", ROUND(MIN(sc.progress),1) AS "Min Grade",
@@ -249,7 +249,7 @@ SELECT s.firstname AS "First Name", s.lastname AS "Last Name", ROUND(MIN(sc.prog
 
 
 /* 4J
-Write a query that returns students full name with “Student Name? as alias whose
+Write a query that returns students full name with â€œStudent Name? as alias whose
 progress is greater than the average progress for their course.
 */
 
